@@ -1,7 +1,7 @@
 # MapMX
 Shapefiles, datos y herramientas para mapas de México
 
-# Makefile
+## Makefile
 GENERATED_FILES = \
 	mx.json
 
