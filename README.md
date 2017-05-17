@@ -2,6 +2,7 @@
 Shapefiles, datos y herramientas para mapas de México
 
 ## Makefile
+```
 GENERATED_FILES = \
 	mx.json
 
@@ -26,7 +27,7 @@ build/mgm2010v5_0a.shp: build/mgm2010v5_0a.zip
 
 mx.json: build/mgm2010v5_0a.shp
 	node_modules/.bin/geo2topo --width=960 --margin=20 --simplify=1 -q 1e5 -o $@ -p name=NOM_MUN -p state=+CVE_ENT -p munic=+CVE_MUN -- municipalities=$<
-
+```
 ### Problemas con topojson/geo2topo
 Hay issues con instalación de topojson/geo2topo que hacen que el Makefile no jale en algunos casos. 
 El topojson de municipios (mx.json) ya tiene nombre, y códigos de estado y municipio.
